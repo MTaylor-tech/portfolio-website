@@ -16,7 +16,7 @@
 						enabled: true,
 
 					// Sets the distance to scroll when using the left/right arrow keys.
-						distance: 50
+						distance: 500
 
 				},
 
@@ -174,31 +174,81 @@
 						.on('keydown', function(event) {
 
 							var scrolled = false;
+							intervalId = null;
 
 							switch (event.keyCode) {
 
 								// Left arrow.
 									case 37:
-										$document.scrollLeft($document.scrollLeft() - settings.keyboardShortcuts.distance);
+										/* $document.scrollLeft($document.scrollLeft() - settings.keyboardShortcuts.distance);
+										scrolled = true; */
+										clearInterval(intervalId);
+										var farEnough = 0;
+
+										intervalId = setInterval(function() {
+
+												$document.scrollLeft($document.scrollLeft() - (settings.scrollZones.speed));
+												farEnough += settings.scrollZones.speed;
+												if (farEnough >= settings.keyboardShortcuts.distance) {
+													clearInterval(intervalId);
+												}
+
+										}, 25);
 										scrolled = true;
 										break;
 
 								// Right arrow.
 									case 39:
-										$document.scrollLeft($document.scrollLeft() + settings.keyboardShortcuts.distance);
+										/*$document.scrollLeft($document.scrollLeft() + settings.keyboardShortcuts.distance);*/
+										clearInterval(intervalId);
+										var farEnough = 0;
+
+										intervalId = setInterval(function() {
+
+												$document.scrollLeft($document.scrollLeft() + (settings.scrollZones.speed));
+												farEnough += settings.scrollZones.speed;
+												if (farEnough >= settings.keyboardShortcuts.distance) {
+													clearInterval(intervalId);
+												}
+
+										}, 25);
 										scrolled = true;
 										break;
 
 								// Page Up.
 									case 33:
-										$document.scrollLeft($document.scrollLeft() - $window.width() + 100);
+										/*$document.scrollLeft($document.scrollLeft() - $window.width() + 100);*/
+										clearInterval(intervalId);
+										var farEnough = 0;
+
+										intervalId = setInterval(function() {
+
+												$document.scrollLeft($document.scrollLeft() - (settings.scrollZones.speed));
+												farEnough += settings.scrollZones.speed;
+												if (farEnough >= 2* settings.keyboardShortcuts.distance) {
+													clearInterval(intervalId);
+												}
+
+										}, 25);
 										scrolled = true;
 										break;
 
 								// Page Down, Space.
 									case 34:
 									case 32:
-										$document.scrollLeft($document.scrollLeft() + $window.width() - 100);
+										/*$document.scrollLeft($document.scrollLeft() + $window.width() - 100);*/
+										clearInterval(intervalId);
+										var farEnough = 0;
+
+										intervalId = setInterval(function() {
+
+												$document.scrollLeft($document.scrollLeft() + (settings.scrollZones.speed));
+												farEnough += settings.scrollZones.speed;
+												if (farEnough >= 2*settings.keyboardShortcuts.distance) {
+													clearInterval(intervalId);
+												}
+
+										}, 25);
 										scrolled = true;
 										break;
 
