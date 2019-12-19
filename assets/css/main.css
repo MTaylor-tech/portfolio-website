@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+@import url(all.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300i,400i");
 
 /*
@@ -868,6 +868,7 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
+		
 
 /* Image */
 
@@ -2247,6 +2248,12 @@ input, select, textarea {
 				background-color: #323459;
 			}
 
+			.panel > *.color5 {
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(171, 206, 248, 0.175) 25%, rgba(159, 163, 168, 0.175) 50%, rgba(72, 123, 187, 0.175));
+				background-size: 128px 128px, auto;
+				background-color: #ABCEF8;
+			}
+
 		.panel > .intro {
 			padding: 3.5rem 3.5rem 2rem 3.5rem ;
 			display: -moz-flex;
@@ -2762,6 +2769,12 @@ input, select, textarea {
 			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.175) 25%, rgba(227, 123, 124, 0.175) 50%, rgba(255, 228, 180, 0.175));
 			background-size: 128px 128px, auto;
 			background-color: #323459;
+		}
+
+		.panel.color5 {
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(171, 206, 248, 0.175) 25%, rgba(159, 163, 168, 0.175) 50%, rgba(72, 123, 187, 0.175));
+			background-size: 128px 128px, auto;
+			background-color: #ABCEF8;
 		}
 
 	@media screen and (max-width: 736px) {
