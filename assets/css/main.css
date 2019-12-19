@@ -1668,6 +1668,15 @@ input, select, textarea {
 				color: #353865 !important;
 			}
 
+			input[type="submit"].primary.color5,
+			input[type="reset"].primary.color5,
+			input[type="button"].primary.color5,
+			button.primary.color5,
+			.button.primary.color5 {
+				color: #5C7AA4 !important;
+			}
+
+
 			input[type="submit"].primary:hover,
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
@@ -2249,7 +2258,7 @@ input, select, textarea {
 			}
 
 			.panel > *.color5 {
-				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(171, 206, 248, 0.175) 25%, rgba(159, 163, 168, 0.175) 50%, rgba(72, 123, 187, 0.175));
+				background-image: url("../../images/overlay.png"), linear-gradient(45deg, #5C7AA4 25%, #707781 50%, rgba(72, 123, 187, 0.175));
 				background-size: 128px 128px, auto;
 				background-color: #ABCEF8;
 			}
@@ -2772,7 +2781,7 @@ input, select, textarea {
 		}
 
 		.panel.color5 {
-			background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(171, 206, 248, 0.175) 25%, rgba(159, 163, 168, 0.175) 50%, rgba(72, 123, 187, 0.175));
+			background-image: url("../../images/overlay.png"), linear-gradient(45deg, #5C7AA4 25%, #707781 50%, rgba(72, 123, 187, 0.175));
 			background-size: 128px 128px, auto;
 			background-color: #ABCEF8;
 		}
