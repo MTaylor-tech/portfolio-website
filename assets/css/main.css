@@ -868,7 +868,7 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
-		
+
 
 /* Image */
 
@@ -3699,4 +3699,16 @@ input, select, textarea {
 				transform: none;
 			}
 
+	}
+
+	@media screen and (max-width: 736px) {
+		.disappearing {
+			visibility: hidden;
+		}
+
+		.flex-switch-r {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
 	}
